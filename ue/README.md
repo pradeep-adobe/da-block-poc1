@@ -12,6 +12,12 @@ To use Universal Editor, you need:
 
 See https://github.com/adobe/da-live/wiki/Universal-Editor for more details.
 
+## UE as default editor (this site)
+
+The Sidekick **Edit** button is configured to open **Universal Editor** by default via `tools/sidekick/config.json` (`editUrlLabel`: "Universal Editor", `editUrlPattern`: experience.adobe.com UE canvas URL).
+
+To make UE the default when opening documents from the DA library (so users are taken to UE automatically), set **editor.path** in your DA org config at `https://da.live/config#/{{your-org}}/` to your UE canvas URL (e.g. `main--{{site}}--{{org}}.ue.da.live`). See [Setup Universal Editor](https://docs.da.live/administrators/guides/setup-universal-editor).
+
 ## Setting Up UE Instrumentation for Custom Blocks
 
 To enable Universal Editor for custom blocks, you need to create three essential JSON configuration files:

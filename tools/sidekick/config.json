@@ -1,5 +1,5 @@
 {
   "project": "DA Block Collection",
-  "editUrlLabel": "Document Authoring",
-  "editUrlPattern": "https://da.live/edit#/{{org}}/{{site}}{{pathname}}"
+  "editUrlLabel": "Universal Editor",
+  "editUrlPattern": "https://experience.adobe.com/#/@{{org}}/aem/editor/canvas/main--{{site}}--{{org}}.ue.da.live{{pathname}}"
 }
