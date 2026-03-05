@@ -1,4 +1,4 @@
 mountpoints:
   /:
-    url: https://content.da.live/aemsites/da-block-collection/
+    url: https://content.da.live/pradeep-adobe/da-block-poc1/
     type: markup
