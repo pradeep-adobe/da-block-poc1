@@ -1,0 +1,81 @@
+{
+  "definitions": [
+    {
+      "title": "Key Points",
+      "id": "key-points",
+      "model": "key-points",
+      "plugins": {
+        "da": {
+          "name": "key-points",
+          "rows": 1,
+          "columns": 6,
+          "unsafeHTML": "<div class=\"key-points\"><div><div class=\"key-points-item key-points-item-1\"></div><div class=\"key-points-item key-points-item-2\"></div><div class=\"key-points-item key-points-item-3\"></div><div class=\"key-points-item key-points-item-4\"></div><div class=\"key-points-item key-points-item-5\"></div><div class=\"key-points-item key-points-item-6\"></div></div></div>",
+          "fields": [
+            { "name": "point1", "selector": ".key-points-item-1" },
+            { "name": "point2", "selector": ".key-points-item-2" },
+            { "name": "point3", "selector": ".key-points-item-3" },
+            { "name": "point4", "selector": ".key-points-item-4" },
+            { "name": "point5", "selector": ".key-points-item-5" },
+            { "name": "point6", "selector": ".key-points-item-6" }
+          ]
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "key-points",
+      "fields": [
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "point1",
+          "value": "",
+          "label": "Point 1",
+          "required": false
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "point2",
+          "value": "",
+          "label": "Point 2",
+          "required": false
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "point3",
+          "value": "",
+          "label": "Point 3",
+          "required": false
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "point4",
+          "value": "",
+          "label": "Point 4",
+          "required": false
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "point5",
+          "value": "",
+          "label": "Point 5",
+          "required": false
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "point6",
+          "value": "",
+          "label": "Point 6",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

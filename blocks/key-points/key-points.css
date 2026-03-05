@@ -1,0 +1,15 @@
+.key-points {
+  margin: 1rem 0;
+}
+
+.key-points-item {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.key-points-item:empty {
+  min-height: 1.5em;
+  background: #fafafa;
+}

@@ -187,6 +187,59 @@
     ]
   },
   {
+    "id": "key-points",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "point1",
+        "value": "",
+        "label": "Point 1",
+        "required": false
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "point2",
+        "value": "",
+        "label": "Point 2",
+        "required": false
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "point3",
+        "value": "",
+        "label": "Point 3",
+        "required": false
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "point4",
+        "value": "",
+        "label": "Point 4",
+        "required": false
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "point5",
+        "value": "",
+        "label": "Point 5",
+        "required": false
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "point6",
+        "value": "",
+        "label": "Point 6",
+        "required": false
+      }
+    ]
+  },
+  {
     "id": "quote",
     "fields": [
       {
