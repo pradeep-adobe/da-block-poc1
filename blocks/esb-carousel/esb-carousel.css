@@ -1,0 +1,168 @@
+/* ESB Carousel — full-width image carousel with text overlay captions */
+
+.esb-carousel {
+  position: relative;
+  overflow: hidden;
+  background-color: #3E3837;
+}
+
+/* Viewport — clips the slide track */
+.esb-carousel-viewport {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.esb-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+/* Slide — each slide takes 100% of the viewport width */
+.esb-carousel-slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.esb-carousel-slide picture,
+.esb-carousel-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Caption overlay */
+.esb-carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px 24px;
+  font-family: var(--heading-font-family);
+  font-size: 28px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  line-height: 1.2;
+  text-align: center;
+  background: linear-gradient(transparent, rgba(0 0 0 / 50%));
+}
+
+/* Navigation arrows */
+.esb-carousel-nav {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 0 8px;
+  pointer-events: none;
+}
+
+.esb-carousel-prev,
+.esb-carousel-next {
+  pointer-events: all;
+  background: rgba(0 0 0 / 30%);
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+
+.esb-carousel-prev:hover,
+.esb-carousel-next:hover {
+  background: rgba(0 0 0 / 60%);
+}
+
+/* Dot indicators */
+.esb-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  list-style: none;
+  margin: 16px 0;
+  padding: 0;
+}
+
+.esb-carousel-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #B6A17C;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.esb-carousel-dots button.active {
+  background: #B6A17C;
+}
+
+.esb-carousel-dots button:hover {
+  background: #B6A17C;
+}
+
+/* Tablet */
+@media (width >= 768px) {
+  .esb-carousel-caption {
+    font-size: 38px;
+    letter-spacing: 9px;
+    padding: 48px 40px;
+  }
+
+  .esb-carousel-prev,
+  .esb-carousel-next {
+    font-size: 40px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .esb-carousel-nav {
+    padding: 0 16px;
+  }
+}
+
+/* Desktop */
+@media (width >= 1280px) {
+  .esb-carousel-slide picture,
+  .esb-carousel-slide img {
+    aspect-ratio: 21 / 9;
+  }
+
+  .esb-carousel-caption {
+    font-size: 52px;
+    letter-spacing: 12px;
+    padding: 64px;
+  }
+
+  .esb-carousel-prev,
+  .esb-carousel-next {
+    font-size: 48px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .esb-carousel-nav {
+    padding: 0 24px;
+  }
+
+  .esb-carousel-dots {
+    margin: 20px 0;
+  }
+}

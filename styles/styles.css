@@ -28,21 +28,21 @@
   --accent-font-family: Sentinel, 'Sentinel Fallback', Georgia, serif;
 
   /* body sizes */
-  --body-font-size-m: 14px;
-  --body-font-size-s: 13px;
-  --body-font-size-xs: 12px;
+  --body-font-size-m: 13px;
+  --body-font-size-s: 12px;
+  --body-font-size-xs: 11px;
 
   /* heading sizes — mobile first (375px reference) */
-  --heading-font-size-xxl: 46px;
+  --heading-font-size-xxl: 45px;
   --heading-font-size-xl: 30px;
-  --heading-font-size-l: 22px;
+  --heading-font-size-l: 14px;
   --heading-font-size-m: 18px;
   --heading-font-size-s: 16px;
   --heading-font-size-xs: 14px;
 
   /* spacing — mobile first (5% side padding like original) */
-  --section-padding: 32px 0;
-  --section-padding-large: 64px 0;
+  --section-padding: 45px 0;
+  --section-padding-large: 61px 0;
   --container-max-width: 1200px;
   --gutter: 5%;
   --grid-gap: 32px;
@@ -55,13 +55,14 @@
 /* Tablet */
 @media (width >= 768px) {
   :root {
+    --body-font-size-m: 14px;
     --heading-font-size-xxl: 62px;
-    --heading-font-size-xl: 33px;
-    --heading-font-size-l: 24px;
+    --heading-font-size-xl: 30px;
+    --heading-font-size-l: 15px;
     --heading-font-size-m: 20px;
     --heading-font-size-s: 18px;
 
-    --section-padding: 48px 0;
+    --section-padding: 60px 0;
     --section-padding-large: 80px 0;
   }
 }
@@ -69,15 +70,15 @@
 /* Desktop */
 @media (width >= 1280px) {
   :root {
-    --heading-font-size-xxl: 102px;
-    --heading-font-size-xl: 28px;
-    --heading-font-size-l: 24px;
+    --heading-font-size-xxl: 115px;
+    --heading-font-size-xl: 29px;
+    --heading-font-size-l: 15px;
     --heading-font-size-m: 22px;
 
     --nav-height: 72px;
     --gutter: 64px;
-    --section-padding: 48px 0;
-    --section-padding-large: 112px 0;
+    --section-padding: 82px 0;
+    --section-padding-large: 116px 0;
   }
 }
 
@@ -129,7 +130,7 @@ h6 {
 
 h1 {
   font-size: var(--heading-font-size-xxl);
-  letter-spacing: 12px;
+  letter-spacing: 13px;
   line-height: 1.2;
 }
 
@@ -140,7 +141,10 @@ h2 {
 
 h3 {
   font-size: var(--heading-font-size-l);
-  letter-spacing: 5px;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  letter-spacing: 4px;
+  line-height: 1.5;
 }
 
 h4 { font-size: var(--heading-font-size-m); }
@@ -323,6 +327,11 @@ main .section.dark a.button:hover {
   display: none;
 }
 
+/* Hide metadata block — processed by aem.js, not displayed */
+.metadata-wrapper {
+  display: none;
+}
+
 /* accent / serif text helper */
 .accent-text,
 main em {
@@ -353,7 +362,7 @@ main em {
   .section.cards-feed-container > .default-content-wrapper:nth-child(2) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0 64px;
+    gap: 4px 66px;
     max-width: 1200px;
   }
 
@@ -518,8 +527,9 @@ main em {
 .default-content-wrapper > p:has(> a[href*="locations"]):has(> a + a) a {
   text-transform: uppercase;
   font-family: var(--heading-font-family);
-  font-size: 14px;
-  letter-spacing: 3px;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 
 .default-content-wrapper > p:has(> a[href*="locations"]):has(> a + a) a + a::before {
@@ -531,4 +541,70 @@ main em {
 /* Hero logo — constrain size */
 .section.cards-feed-container > .default-content-wrapper:first-child > :first-child img {
   max-width: 200px;
+}
+
+/* ============================================================
+   ESB DARK THEME
+   Empire State Building location pages — dark brown with gold accents.
+   Applied via section-metadata style: esb-dark
+   ============================================================ */
+
+main .section.esb-dark {
+  --esb-bg: #3E3837;
+  --esb-text: #fff;
+  --esb-gold: #B6A17C;
+  --esb-gold-active: #EDC864;
+  --esb-off-white: #F8F6F2;
+  background-color: var(--esb-bg);
+  color: var(--esb-text);
+  padding: 0;
+}
+
+main .section.esb-dark > div {
+  max-width: 100%;
+  padding: 0;
+}
+
+main .section.esb-dark h1 {
+  color: var(--esb-text);
+}
+
+main .section.esb-dark h2 {
+  color: var(--esb-gold);
+  font-size: 37px;
+  letter-spacing: 9px;
+}
+
+main .section.esb-dark h3 {
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+  font-size: 29px;
+  letter-spacing: 7px;
+  color: var(--esb-text);
+}
+
+main .section.esb-dark p {
+  color: var(--esb-text);
+}
+
+main .section.esb-dark a:any-link {
+  color: var(--esb-gold);
+}
+
+main .section.esb-dark a.button:any-link {
+  color: var(--esb-gold);
+  font-family: var(--cta-font-family);
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+main .section.esb-dark a.button:hover {
+  color: var(--esb-gold-active);
+}
+
+main .section.esb-dark h6 {
+  color: var(--esb-off-white);
+  font-size: 14px;
+  letter-spacing: 6px;
 }

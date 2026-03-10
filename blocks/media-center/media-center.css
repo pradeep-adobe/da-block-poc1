@@ -2,28 +2,28 @@
  * Media Center block — centered image/logo between collage sections.
  */
 
+.media-center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .media-center {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 60px 0;
-}
-
-.media-center-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.media-center-wrapper.visible {
+.media-center.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.media-center-wrapper img {
+.media-center img {
   max-width: 120px;
   height: auto;
 }
@@ -33,7 +33,7 @@
     padding: 80px 0;
   }
 
-  .media-center-wrapper img {
+  .media-center img {
     max-width: 160px;
   }
 }
@@ -43,7 +43,7 @@
     padding: 100px 0;
   }
 
-  .media-center-wrapper img {
+  .media-center img {
     max-width: 200px;
   }
 }

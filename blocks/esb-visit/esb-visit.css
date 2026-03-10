@@ -1,0 +1,106 @@
+/* ESB Visit — location info section with image + address/hours */
+
+.esb-visit {
+  background-color: #3E3837;
+  padding: 40px 16px;
+}
+
+.esb-visit-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.esb-visit-image {
+  line-height: 0;
+}
+
+.esb-visit-image picture,
+.esb-visit-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.esb-visit-info {
+  color: #fff;
+}
+
+.esb-visit-info h2 {
+  font-family: var(--heading-font-family);
+  font-size: 37px;
+  font-weight: 400;
+  color: #B6A17C;
+  text-transform: uppercase;
+  letter-spacing: 9px;
+  line-height: 1.2;
+  margin: 0 0 24px;
+}
+
+.esb-visit-info h6 {
+  font-family: var(--heading-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: #F8F6F2;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin: 24px 0 8px;
+}
+
+.esb-visit-info p {
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.8;
+  margin: 0 0 4px;
+}
+
+.esb-visit-info a:any-link {
+  font-family: var(--cta-font-family);
+  font-size: 14px;
+  color: #B6A17C;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.esb-visit-info a:hover {
+  color: #EDC864;
+}
+
+/* Tablet */
+@media (width >= 768px) {
+  .esb-visit {
+    padding: 48px 24px;
+  }
+
+  .esb-visit-wrapper {
+    flex-direction: row;
+    gap: 48px;
+    align-items: flex-start;
+  }
+
+  .esb-visit-image {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .esb-visit-info {
+    flex: 1;
+  }
+}
+
+/* Desktop */
+@media (width >= 1280px) {
+  .esb-visit {
+    padding: 64px;
+  }
+
+  .esb-visit-wrapper {
+    gap: 66px;
+  }
+}

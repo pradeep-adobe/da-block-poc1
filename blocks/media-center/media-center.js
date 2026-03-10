@@ -11,18 +11,14 @@ export default function decorate(block) {
   if (!img) return;
 
   block.textContent = '';
-
-  const wrapper = document.createElement('div');
-  wrapper.className = 'media-center-wrapper';
   img.loading = 'lazy';
-  wrapper.appendChild(img);
-  block.appendChild(wrapper);
+  block.appendChild(img);
 
   // Fade-in on scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        wrapper.classList.add('visible');
+        block.classList.add('visible');
         observer.unobserve(entry.target);
       }
     });

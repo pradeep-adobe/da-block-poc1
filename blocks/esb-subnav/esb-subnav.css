@@ -1,0 +1,122 @@
+/* ESB Sub-Navigation — dark header bar with title, action buttons, nav links */
+
+.esb-subnav {
+  background-color: #3E3837;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+/* Title */
+.esb-subnav-title h1 {
+  font-family: var(--heading-font-family);
+  font-size: 32px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  line-height: 1.2;
+  margin: 0 0 20px;
+}
+
+/* Action buttons row */
+.esb-subnav-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.section.esb-dark .esb-subnav a.esb-subnav-action-btn:any-link {
+  display: inline-block;
+  background-color: #B6A17C;
+  color: #000;
+  font-family: var(--heading-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 10px 24px;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.section.esb-dark .esb-subnav a.esb-subnav-action-btn:hover {
+  background-color: #d4c4a8;
+  color: #000;
+}
+
+/* Navigation links row */
+.esb-subnav-links {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.section.esb-dark .esb-subnav-links a:any-link {
+  font-family: var(--heading-font-family);
+  font-size: 13px;
+  font-weight: 400;
+  color: #F8F6F2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.2s;
+}
+
+.section.esb-dark .esb-subnav-links a:hover {
+  color: #B6A17C;
+}
+
+.section.esb-dark .esb-subnav-links a.active {
+  color: #EDC864;
+}
+
+/* Tablet */
+@media (width >= 768px) {
+  .esb-subnav {
+    padding: 32px 24px;
+  }
+
+  .esb-subnav-title h1 {
+    font-size: 42px;
+    letter-spacing: 10px;
+  }
+
+  .section.esb-dark .esb-subnav a.esb-subnav-action-btn:any-link {
+    font-size: 15px;
+    padding: 12px 32px;
+  }
+
+  .section.esb-dark .esb-subnav-links a:any-link {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Desktop */
+@media (width >= 1280px) {
+  .esb-subnav {
+    padding: 40px 64px;
+  }
+
+  .esb-subnav-title h1 {
+    font-size: 52px;
+    letter-spacing: 12.5px;
+    margin-bottom: 24px;
+  }
+
+  .section.esb-dark .esb-subnav a.esb-subnav-action-btn:any-link {
+    font-size: 16.5px;
+    letter-spacing: 3px;
+    padding: 14px 40px;
+  }
+
+  .section.esb-dark .esb-subnav-links a:any-link {
+    font-size: 15.5px;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+  }
+}
