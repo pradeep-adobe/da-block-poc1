@@ -334,23 +334,23 @@ main em {
 /* ============================================================
    HOMEPAGE COLLAGE LAYOUT
    Creates two-column grid from flat default-content-wrapper.
-   Children are numbered 1-30 (CSS nth-child is 1-based).
+   Hero content is now in its own auto-block, so children
+   are numbered 1-23 (CSS nth-child is 1-based).
 
    Content map:
-   1-7:   Hero (full-width)
-   8-11:  "Exquisite Coffees" — images(8) LEFT, text(9-11) RIGHT
-   12-15: "Experiences" — text(12-14) LEFT, images(15) RIGHT
-   16-19: "Empire State" — images(16) LEFT, text(17-19) RIGHT
-   20:    Logo divider (full-width, centered)
-   21-24: "Visit" — images(21) LEFT, text(22-24) RIGHT
-   25-28: "Explore Coffee" — text(25-27) LEFT, images(28) RIGHT
-   29:    Coffee bean illustration (full-width, centered)
-   30:    "Select Coffees" label
+   1-4:   "Exquisite Coffees" — images(1) LEFT, text(2-4) RIGHT
+   5-8:   "Experiences" — text(5-7) LEFT, images(8) RIGHT
+   9-12:  "Empire State" — images(9) LEFT, text(10-12) RIGHT
+   13:    Logo divider (full-width, centered)
+   14-17: "Visit" — images(14) LEFT, text(15-17) RIGHT
+   18-21: "Explore Coffee" — text(18-20) LEFT, images(21) RIGHT
+   22:    Coffee bean illustration (full-width, centered)
+   23:    "Select Coffees" label
    ============================================================ */
 
 @media (width >= 768px) {
-  /* Grid container */
-  .section.cards-feed-container > .default-content-wrapper:first-child {
+  /* Grid container — :nth-child(2) targets the default-content-wrapper after home-page-hero-wrapper */
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 64px;
@@ -358,106 +358,106 @@ main em {
   }
 
   /* Default: all children span full width */
-  .section.cards-feed-container > .default-content-wrapper:first-child > * {
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > * {
     grid-column: 1 / -1;
   }
 
-  /* --- Collage 1: Exquisite Coffees (children 8-11) — images LEFT, text RIGHT --- */
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(8) {
+  /* --- Collage 1: Exquisite Coffees (children 1-4) — images LEFT, text RIGHT --- */
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(1) {
     grid-column: 1;
-    grid-row: 8 / 12;
+    grid-row: 1 / 5;
     overflow: hidden;
   }
 
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(9),
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(10),
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(11) {
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(2),
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(3),
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(4) {
     grid-column: 2;
     align-self: center;
   }
 
-  /* --- Collage 2: Experiences (children 12-15) — text LEFT, images RIGHT --- */
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(12),
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(13),
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(14) {
+  /* --- Collage 2: Experiences (children 5-8) — text LEFT, images RIGHT --- */
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(5),
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(6),
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(7) {
     grid-column: 1;
     align-self: center;
   }
 
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(15) {
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(8) {
     grid-column: 2;
-    grid-row: 12 / 16;
+    grid-row: 5 / 9;
     overflow: hidden;
   }
 
-  /* --- Collage 3: Empire State (children 16-19) — images LEFT, text RIGHT --- */
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(16) {
+  /* --- Collage 3: Empire State (children 9-12) — images LEFT, text RIGHT --- */
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(9) {
     grid-column: 1;
-    grid-row: 16 / 20;
+    grid-row: 9 / 13;
     overflow: hidden;
   }
 
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(17),
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(18),
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(19) {
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(10),
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(11),
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(12) {
     grid-column: 2;
     align-self: center;
   }
 
-  /* --- Logo divider (child 20) — centered --- */
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(20) {
+  /* --- Logo divider (child 13) — centered --- */
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(13) {
     text-align: center;
     padding: 80px 0;
   }
 
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(20) img {
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(13) img {
     max-width: 80px;
     margin: 0 auto;
     display: block;
   }
 
-  /* --- Collage 4: Visit (children 21-24) — images LEFT, text RIGHT --- */
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(21) {
+  /* --- Collage 4: Visit (children 14-17) — images LEFT, text RIGHT --- */
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(14) {
     grid-column: 1;
-    grid-row: 22 / 26;
+    grid-row: 14 / 18;
     overflow: hidden;
   }
 
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(22),
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(23),
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(24) {
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(15),
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(16),
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(17) {
     grid-column: 2;
     align-self: center;
   }
 
-  /* --- Collage 5: Explore Coffee (children 25-28) — text LEFT, images RIGHT --- */
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(25),
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(26),
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(27) {
+  /* --- Collage 5: Explore Coffee (children 18-21) — text LEFT, images RIGHT --- */
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(18),
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(19),
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(20) {
     grid-column: 1;
     align-self: center;
   }
 
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(28) {
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(21) {
     grid-column: 2;
-    grid-row: 26 / 30;
+    grid-row: 18 / 22;
     overflow: hidden;
   }
 
-  /* --- Bean illustration (child 29) — centered --- */
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(29) {
+  /* --- Bean illustration (child 22) — centered --- */
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(22) {
     text-align: center;
     padding: 40px 0;
   }
 
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(29) img {
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(22) img {
     max-width: 120px;
     margin: 0 auto;
     display: block;
   }
 
-  /* --- Select Coffees label (child 30) --- */
-  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(30) {
+  /* --- Select Coffees label (child 23) --- */
+  .section.cards-feed-container > .default-content-wrapper:nth-child(2) > :nth-child(23) {
     font-family: var(--heading-font-family);
     font-size: 16px;
     text-transform: uppercase;

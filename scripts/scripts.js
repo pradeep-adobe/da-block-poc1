@@ -1,4 +1,5 @@
 import {
+  buildBlock,
   loadHeader,
   loadFooter,
   decorateButtons,
@@ -60,12 +61,84 @@ async function loadFonts() {
 }
 
 /**
+ * Builds the home-page-hero auto block from flat default content.
+ * Detects the hero pattern: logo img + h1 + subtitle + description + city links + hero image.
+ * @param {Element} main The main element
+ */
+function buildHeroBlock(main) {
+  const h1 = main.querySelector('h1');
+  if (!h1) return;
+
+  const section = h1.closest('div');
+  const logo = section.querySelector(':scope > p:first-child > img');
+  if (!logo) return;
+
+  // Collect hero elements: everything from the logo paragraph up to (and including) the GIF image
+  const heroElements = [];
+  let el = logo.parentElement;
+  while (el && el.parentElement === section) {
+    heroElements.push(el);
+    // Stop after we find a paragraph containing a GIF or single image AFTER the city links
+    if (el.tagName === 'P' && el.querySelector('img') && heroElements.length > 5) break;
+    el = el.nextElementSibling;
+  }
+
+  if (heroElements.length < 6) return;
+
+  // Build the block: each hero element becomes a row
+  const rows = heroElements.map((elem) => [{ elems: [elem] }]);
+  const block = buildBlock('home-page-hero', rows);
+  section.prepend(block);
+}
+
+/**
+ * Builds the location-section auto block from flat default content.
+ * Detects the pattern: "Roasteries" text + alternating image/link pairs + "Find a location" CTA.
+ * @param {Element} main The main element
+ */
+function buildLocationBlock(main) {
+  // Find the "Roasteries" paragraph (plain text, no links, no images)
+  const allPs = [...main.querySelectorAll('p')];
+  const roasteriesP = allPs.find((p) => p.textContent.trim() === 'Roasteries' && !p.querySelector('a') && !p.querySelector('img'));
+  if (!roasteriesP) return;
+
+  const section = roasteriesP.parentElement;
+  const elements = [roasteriesP];
+  let el = roasteriesP.nextElementSibling;
+
+  // Collect image/link pairs and the "Find a location" CTA
+  while (el && el.parentElement === section) {
+    // Stop before "Related Stories" or any non-location content
+    if (el.tagName === 'P' && !el.querySelector('a') && !el.querySelector('img') && el.textContent.trim()) break;
+    elements.push(el);
+    // Stop after "Find a location" link
+    const link = el.querySelector('a');
+    if (link && link.textContent.toLowerCase().includes('find')) break;
+    el = el.nextElementSibling;
+  }
+
+  if (elements.length < 4) return;
+
+  // Save insertion point before buildBlock moves the elements
+  const insertAfter = roasteriesP.previousElementSibling;
+  const rows = elements.map((elem) => [{ elems: [elem] }]);
+  const block = buildBlock('location-section', rows);
+
+  if (insertAfter) {
+    insertAfter.after(block);
+  } else {
+    section.prepend(block);
+  }
+}
+
+/**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
-function buildAutoBlocks() {
+function buildAutoBlocks(main) {
   try {
-    // TODO: add auto block, if needed
+    buildHeroBlock(main);
+    buildLocationBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);

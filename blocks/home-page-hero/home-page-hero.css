@@ -1,0 +1,176 @@
+/* Home Page Hero — 3-column grid matching live starbucksreserve.com hero
+   Layout: Logo (left) | Content (center) | Image (right)
+   Live site grid: ~228px ~594px ~342px with 66px gap */
+
+.home-page-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding: 32px 0;
+  align-items: center;
+}
+
+/* Logo column */
+.home-page-hero-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-page-hero-logo img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+}
+
+/* Content column */
+.home-page-hero-content {
+  text-align: center;
+}
+
+.home-page-hero-content h1 {
+  font-family: var(--heading-font-family);
+  font-size: 60px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  line-height: 1.2;
+  margin: 0 0 24px;
+}
+
+.home-page-hero-content h1 .accent {
+  color: var(--accent-color);
+}
+
+.home-page-hero-subtitle {
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+
+.home-page-hero-description {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: 500;
+  line-height: 2.4;
+  margin: 0 0 24px;
+}
+
+/* City links */
+.home-page-hero-cities p {
+  margin: 0 0 4px;
+  line-height: 2;
+}
+
+.home-page-hero-cities a {
+  font-family: var(--heading-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.home-page-hero-cities a:hover {
+  color: var(--accent-color);
+}
+
+.home-page-hero-cities a + a::before {
+  content: '|';
+  margin: 0 12px;
+  color: var(--border-color);
+}
+
+/* Image column */
+.home-page-hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-page-hero-image img {
+  width: 100%;
+  max-width: 342px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Tablet — 2-column: content + image, logo above */
+@media (width >= 768px) {
+  .home-page-hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px 0;
+  }
+
+  .home-page-hero-logo {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+
+  .home-page-hero-logo img {
+    max-width: 180px;
+  }
+
+  .home-page-hero-content {
+    text-align: left;
+  }
+
+  .home-page-hero-content h1 {
+    font-size: 72px;
+  }
+
+  .home-page-hero-subtitle {
+    font-size: 24px;
+  }
+}
+
+/* Desktop — 3-column grid matching live site */
+@media (width >= 1280px) {
+  .home-page-hero {
+    grid-template-columns: minmax(160px, 228px) 1fr minmax(280px, 342px);
+    gap: 66px;
+    padding: 33px 0;
+  }
+
+  .home-page-hero-logo {
+    grid-column: 1;
+    justify-content: center;
+  }
+
+  .home-page-hero-logo img {
+    max-width: 228px;
+  }
+
+  .home-page-hero-content {
+    text-align: left;
+  }
+
+  .home-page-hero-content h1 {
+    font-size: 102px;
+    letter-spacing: 12px;
+    line-height: 1.2;
+    margin: 0 0 32px;
+  }
+
+  .home-page-hero-subtitle {
+    font-size: 28px;
+    letter-spacing: 4px;
+    line-height: 1.5;
+  }
+
+  .home-page-hero-description {
+    font-size: var(--body-font-size-m);
+    line-height: 2.4;
+  }
+
+  .home-page-hero-image img {
+    max-width: 342px;
+  }
+}
