@@ -24,26 +24,31 @@ footer .footer a:hover {
   color: var(--accent-color);
 }
 
-/* Top section: logo LEFT, social links RIGHT (space-between) */
+/* Top section: logo + social links centered in a row */
 footer .footer .section:first-child .default-content-wrapper > div {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 32px;
   padding-bottom: 80px;
 }
 
-/* Brand link in footer — styled as uppercase wordmark */
-footer .footer .section:first-child .button-container {
+/* Footer logo image */
+footer .footer .section:first-child p:first-child {
   margin: 0;
+  line-height: 0;
 }
 
-footer .footer .section:first-child .button-container a:any-link {
-  font-family: var(--heading-font-family);
-  font-size: 13px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 5px;
+footer .footer .section:first-child p:first-child a {
+  display: inline-flex;
+  align-items: center;
+}
+
+footer .footer .section:first-child p:first-child img {
+  width: auto;
+  height: 13px;
+  max-width: 240px;
 }
 
 /* Top section social links (Find a Location, Instagram) */
@@ -54,11 +59,28 @@ footer .footer .section:first-child ul {
 }
 
 footer .footer .section:first-child ul a:any-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--heading-font-family);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+/* Icon styling in footer social links */
+footer .footer .section:first-child ul .icon {
+  display: inline-flex;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+}
+
+footer .footer .section:first-child ul .icon img {
+  width: 22px;
+  height: 22px;
+  filter: invert(1);
 }
 
 footer .footer ul {
@@ -90,7 +112,7 @@ footer .footer .section:last-child ul {
   gap: 24px;
 }
 
-/* Bottom section links (Privacy, Terms, etc.) — Avenir, 12px, grey */
+/* Bottom section links (Privacy, Terms, etc.) */
 footer .footer .section:last-child a:any-link {
   font-family: var(--body-font-family);
   font-size: 12px;

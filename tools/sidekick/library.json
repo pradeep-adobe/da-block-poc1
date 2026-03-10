@@ -1,0 +1,20 @@
+{
+  "blocks": {
+    "data": [
+      "/docs/library/blocks/home-page-hero",
+      "/docs/library/blocks/article-hero",
+      "/docs/library/blocks/collage",
+      "/docs/library/blocks/media-center",
+      "/docs/library/blocks/cards-feed",
+      "/docs/library/blocks/cards-brew",
+      "/docs/library/blocks/cards-location",
+      "/docs/library/blocks/columns-coffee",
+      "/docs/library/blocks/columns-info",
+      "/docs/library/blocks/accordion",
+      "/docs/library/blocks/promo",
+      "/docs/library/blocks/menu-list",
+      "/docs/library/blocks/location-section",
+      "/docs/library/blocks/coffee-carousel"
+    ]
+  }
+}

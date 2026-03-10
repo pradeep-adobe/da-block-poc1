@@ -126,25 +126,40 @@ export default async function decorate(block) {
   });
 
   const navBrand = nav.querySelector('.nav-brand');
-  const brandLink = navBrand.querySelector('.button');
-  if (brandLink) {
-    brandLink.className = '';
-    brandLink.closest('.button-container').className = '';
-  }
+
+  // Strip button classes from brand links
+  navBrand.querySelectorAll('.button').forEach((btn) => {
+    btn.className = '';
+    const bc = btn.closest('.button-container');
+    if (bc) bc.className = '';
+  });
 
   // Extract Star/R logo from brand and place as separate left-side element
-  const brandImg = navBrand.querySelector('img');
-  if (brandImg) {
-    const imgP = brandImg.closest('p');
+  const allBrandImgs = [...navBrand.querySelectorAll('img')];
+  const starLogo = allBrandImgs.find((img) => img.alt && img.alt.includes('Logo') && img.src.includes('Star_Logo'));
+  const wordmark = allBrandImgs.find((img) => img !== starLogo);
+
+  if (starLogo) {
+    const imgP = starLogo.closest('p');
     const navLogo = document.createElement('div');
     navLogo.className = 'nav-logo';
     const logoLink = document.createElement('a');
     logoLink.href = '/';
     logoLink.setAttribute('aria-label', 'Starbucks Reserve Home');
-    logoLink.append(brandImg);
+    logoLink.append(starLogo);
     navLogo.append(logoLink);
     nav.append(navLogo);
     if (imgP) imgP.remove();
+  }
+
+  // Ensure wordmark image link is clean (no button classes)
+  if (wordmark) {
+    const wordmarkLink = wordmark.closest('a');
+    if (wordmarkLink) {
+      wordmarkLink.className = 'nav-brand-link';
+      wordmarkLink.setAttribute('aria-label', 'Starbucks Reserve Home');
+    }
+    wordmark.classList.add('nav-wordmark');
   }
 
   const navSections = nav.querySelector('.nav-sections');

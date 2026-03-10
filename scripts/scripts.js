@@ -66,6 +66,9 @@ async function loadFonts() {
  * @param {Element} main The main element
  */
 function buildHeroBlock(main) {
+  // Skip if block is already authored in the content
+  if (main.querySelector('.home-page-hero')) return;
+
   const h1 = main.querySelector('h1');
   if (!h1) return;
 
@@ -97,6 +100,9 @@ function buildHeroBlock(main) {
  * @param {Element} main The main element
  */
 function buildLocationBlock(main) {
+  // Skip if block is already authored in the content
+  if (main.querySelector('.location-section')) return;
+
   // Find the "Roasteries" paragraph (plain text, no links, no images)
   const allPs = [...main.querySelectorAll('p')];
   const roasteriesP = allPs.find((p) => p.textContent.trim() === 'Roasteries' && !p.querySelector('a') && !p.querySelector('img'));
@@ -138,6 +144,9 @@ function buildLocationBlock(main) {
  * @param {Element} main The main element
  */
 function buildArticleHeroBlock(main) {
+  // Skip if block is already authored in the content
+  if (main.querySelector('.article-hero')) return;
+
   const sections = [...main.children];
   if (sections.length < 2) return;
 
@@ -193,6 +202,9 @@ function buildArticleHeroBlock(main) {
  * @param {Element} main The main element
  */
 function buildCoffeeCarouselBlock(main) {
+  // Skip if block is already authored in the content
+  if (main.querySelector('.coffee-carousel')) return;
+
   const allLinks = [...main.querySelectorAll('p > a')];
   const nextCoffeeLinks = allLinks.filter((a) => a.textContent.trim() === 'Next Coffee');
   if (nextCoffeeLinks.length < 3) return;
@@ -224,6 +236,9 @@ function buildCoffeeCarouselBlock(main) {
  * @param {Element} main The main element
  */
 function buildAccordionBlock(main) {
+  // Skip if block is already authored in the content
+  if (main.querySelector('.accordion')) return;
+
   // Look for FAQ-style content: section with multiple <strong> elements (questions)
   const sections = [...main.children];
   sections.forEach((section) => {
@@ -354,6 +369,9 @@ function buildAccordionBlock(main) {
  * @param {Element} main The main element
  */
 function buildMenuListBlock(main) {
+  // Skip if block is already authored in the content
+  if (main.querySelector('.menu-list')) return;
+
   const sections = [...main.children];
   sections.forEach((section) => {
     const h1 = section.querySelector('h1');
@@ -401,6 +419,8 @@ function buildMenuListBlock(main) {
  * @param {Element} main The main element
  */
 function buildPromoBlock(main) {
+  // Skip if block is already authored in the content
+  if (main.querySelector('.promo')) return;
   // Skip homepage — it uses a collage layout that depends on specific child ordering
   if (main.querySelector('.home-page-hero')) return;
 
