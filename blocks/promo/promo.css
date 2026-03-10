@@ -1,0 +1,55 @@
+/* Promo — Call-to-action section */
+.promo-container {
+  background-color: var(--light-color);
+}
+
+.promo {
+  text-align: center;
+  padding: 48px 0;
+}
+
+.promo-content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.promo-content h2 {
+  font-size: var(--heading-font-size-xl);
+  margin: 0 0 8px;
+}
+
+.promo-content h3 {
+  font-size: var(--heading-font-size-l);
+  margin: 0 0 8px;
+}
+
+.promo-content p {
+  font-size: var(--body-font-size-m);
+  line-height: 2;
+  margin: 0 0 24px;
+}
+
+.promo-cta {
+  margin-top: 16px;
+}
+
+.promo-cta a.button {
+  font-family: var(--cta-font-family);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  border: 1px solid var(--text-color);
+  padding: 12px 32px;
+  text-align: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.promo-cta a.button:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+@media (width >= 768px) {
+  .promo {
+    padding: 72px 0;
+  }
+}

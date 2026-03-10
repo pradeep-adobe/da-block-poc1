@@ -1,0 +1,39 @@
+/* Coffee Carousel — Next Coffee navigation link */
+.coffee-carousel {
+  padding: 0;
+  margin: 0;
+}
+
+.coffee-carousel-next {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 0;
+}
+
+.coffee-carousel-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--cta-font-family);
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.2s;
+}
+
+.coffee-carousel-link:hover {
+  color: var(--accent-color);
+}
+
+.coffee-carousel-arrow {
+  display: flex;
+  align-items: center;
+}
+
+.coffee-carousel-arrow svg {
+  width: 18px;
+  height: 8px;
+}

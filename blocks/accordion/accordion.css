@@ -1,0 +1,73 @@
+/* Accordion — Expandable Q&A sections */
+.accordion {
+  padding: 0;
+}
+
+.accordion-category {
+  margin-top: 32px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--text-color);
+}
+
+.accordion-category h2,
+.accordion-category h3,
+.accordion-category h4 {
+  margin: 0;
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.accordion-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  cursor: pointer;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: 700;
+  line-height: 1.6;
+  list-style: none;
+  user-select: none;
+}
+
+.accordion-question::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-question::after {
+  content: '+';
+  font-size: 24px;
+  font-weight: 300;
+  flex-shrink: 0;
+  margin-left: 16px;
+  transition: transform 0.3s;
+}
+
+.accordion-item[open] .accordion-question::after {
+  content: '\2212';
+}
+
+.accordion-answer {
+  padding: 0 0 20px;
+  line-height: 2;
+}
+
+.accordion-answer p {
+  margin: 0 0 12px;
+  line-height: 2;
+}
+
+.accordion-answer a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+@media (width >= 768px) {
+  .accordion-question {
+    font-size: 15px;
+    padding: 24px 0;
+  }
+}
