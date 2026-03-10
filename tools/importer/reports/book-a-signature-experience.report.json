@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/book-a-signature-experience",
+  "path": "book-a-signature-experience",
+  "timestamp": "2026-03-09T14:30:51.138Z",
+  "title": "Book a Signature Experience | Starbucks Reserve®",
+  "template": "booking-page",
+  "blocks": [
+    "cards-feed",
+    "cards-location"
+  ]
+}

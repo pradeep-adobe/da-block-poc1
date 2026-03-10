@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/coffee/hawaii-kona-peaberry-coffee",
+  "path": "coffee/hawaii-kona-peaberry-coffee",
+  "timestamp": "2026-03-09T14:12:02.841Z",
+  "title": "Hawai'I Kona Peaberry Coffee | Starbucks Reserve",
+  "template": "coffee-detail",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew",
+    "cards-feed",
+    "cards-feed"
+  ]
+}

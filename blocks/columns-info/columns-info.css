@@ -1,0 +1,48 @@
+.columns-info > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-info img {
+  width: 100%;
+}
+
+.columns-info > div > div {
+  order: 1;
+  padding: 32px 0;
+}
+
+.columns-info > div > div h2,
+.columns-info > div > div h3 {
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+.columns-info > div > div p {
+  font-size: var(--body-font-size-m);
+  line-height: 2.4;
+}
+
+.columns-info > div > .columns-info-img-col {
+  order: 0;
+}
+
+.columns-info > div > .columns-info-img-col img {
+  display: block;
+}
+
+@media (width >= 768px) {
+  .columns-info > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 48px;
+  }
+
+  .columns-info > div > div {
+    flex: 1;
+    order: unset;
+    padding: 0;
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "variantName": "columns-info",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-03-09T13:51:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.starbucksreserve.com/about",
+    "originPage": "about page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "informational",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "informational side-by-side layouts",
+      "image + text content sections",
+      "about pages with descriptive content"
+    ],
+    "notSuitableFor": [
+      "product comparison grids",
+      "data-heavy side-by-side layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/about"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-09T13:51:00.000Z"
+  }
+}

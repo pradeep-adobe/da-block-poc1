@@ -1,36 +1,85 @@
-/* stylelint-disable max-line-length */
+/*
+ * Starbucks Reserve — Font Definitions
+ *
+ * Font families:
+ *   1. Trade Gothic LT Std Bold Condensed 20 — Headings (h1–h2), nav links
+ *   2. Trade Gothic LT Std Condensed 18      — CTAs, button labels
+ *   3. Avenir LT Std Medium                  — Body text (weight 500)
+ *   4. Avenir LT Std Roman                   — Content paragraphs, h3 (weight 400)
+ *   5. Sentinel Medium                        — Subheadings, labels, italics
+ */
+
+/* Trade Gothic Bold Condensed — headings, display */
 @font-face {
-  font-family: roboto-condensed;
-  font-style: normal;
+  font-family: 'Trade Gothic Bold Condensed';
+  src: url('https://cdn.prod.website-files.com/6580c76ebe70d1634558a7c2/65cc13bda8f94d8fc571f939_TradeGothicLTStd-BdCn20.woff') format('woff');
   font-weight: 700;
+  font-style: normal;
   font-display: swap;
-  src: url('../fonts/roboto-condensed-bold.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* Trade Gothic Condensed — CTAs, small labels */
 @font-face {
-  font-family: roboto;
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('../fonts/roboto-bold.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('../fonts/roboto-medium.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: roboto;
-  font-style: normal;
+  font-family: 'Trade Gothic Condensed';
+  src: url('https://cdn.prod.website-files.com/6580c76ebe70d1634558a7c2/65cc13bdd9c9a18852cac2a2_TradeGothicLTStd-Cn18.woff') format('woff');
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
-  src: url('../fonts/roboto-regular.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Avenir LT Std — body, medium weight */
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('https://cdn.prod.website-files.com/6580c76ebe70d1634558a7c2/65959dcdbab9c8a7f7f95dd6_AvenirLTStd-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Avenir LT Std Roman — content paragraphs, lighter body */
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('https://cdn.prod.website-files.com/6580c76ebe70d1634558a7c2/65959dcdafb3fb43c81ad89b_AvenirLTStd-Roman.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Sentinel — subheadings, serif accent */
+@font-face {
+  font-family: Sentinel;
+  src: url('https://cdn.prod.website-files.com/6580c76ebe70d1634558a7c2/6596f260d7997cd15e3b4fbe_Sentinel-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Sentinel;
+  src: url('https://cdn.prod.website-files.com/6580c76ebe70d1634558a7c2/6596f2608814fc306488bcae_Sentinel-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Metric fallbacks — approximate the web fonts with system fonts */
+@font-face {
+  font-family: 'Trade Gothic Bold Condensed Fallback';
+  src: local('Arial Narrow'), local('Arial');
+  size-adjust: 90%;
+  ascent-override: 100%;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std Fallback';
+  src: local('Arial');
+  size-adjust: 98%;
+  ascent-override: 100%;
+}
+
+@font-face {
+  font-family: 'Sentinel Fallback';
+  src: local('Georgia');
+  size-adjust: 96%;
+  ascent-override: 100%;
 }

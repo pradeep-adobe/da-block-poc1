@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/about",
+  "path": "about",
+  "timestamp": "2026-03-09T14:01:29.022Z",
+  "title": "About | Starbucks Reserve®",
+  "template": "about-page",
+  "blocks": [
+    "columns-info",
+    "columns-info",
+    "cards-location"
+  ]
+}

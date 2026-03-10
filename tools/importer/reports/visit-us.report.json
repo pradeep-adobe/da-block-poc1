@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/visit-us",
+  "path": "visit-us",
+  "timestamp": "2026-03-09T14:32:25.552Z",
+  "title": "Visit | Starbucks Reserve®",
+  "template": "visit-page",
+  "blocks": [
+    "cards-location",
+    "cards-feed"
+  ]
+}

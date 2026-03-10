@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/coffee/colombia-el-rancho-pink-bourbon",
+  "path": "coffee/colombia-el-rancho-pink-bourbon",
+  "timestamp": "2026-03-09T14:11:37.610Z",
+  "title": "Colombia El Rancho Pink Bourbon | Starbucks Reserve",
+  "template": "coffee-detail",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew",
+    "cards-feed",
+    "cards-feed"
+  ]
+}

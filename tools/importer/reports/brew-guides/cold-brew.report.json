@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/brew-guides/cold-brew",
+  "path": "brew-guides/cold-brew",
+  "timestamp": "2026-03-09T14:34:04.532Z",
+  "title": "Brew Method: Cold Brew | Starbucks Reserve®",
+  "template": "brew-guide",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/stories/frequently-asked-questions-faqs",
+  "path": "stories/frequently-asked-questions-faqs",
+  "timestamp": "2026-03-09T14:16:26.437Z",
+  "title": "Frequently Asked Questions (FAQs) about Starbucks Reserve",
+  "template": "story-article",
+  "blocks": [
+    "cards-feed"
+  ]
+}

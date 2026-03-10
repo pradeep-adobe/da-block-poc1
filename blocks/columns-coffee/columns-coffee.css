@@ -1,0 +1,48 @@
+.columns-coffee > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-coffee img {
+  width: 100%;
+}
+
+.columns-coffee > div > div {
+  order: 1;
+  padding: 32px 0;
+}
+
+.columns-coffee > div > div h2,
+.columns-coffee > div > div h3 {
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+.columns-coffee > div > div p {
+  font-size: var(--body-font-size-m);
+  line-height: 2.4;
+}
+
+.columns-coffee > div > .columns-coffee-img-col {
+  order: 0;
+}
+
+.columns-coffee > div > .columns-coffee-img-col img {
+  display: block;
+}
+
+@media (width >= 768px) {
+  .columns-coffee > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 48px;
+  }
+
+  .columns-coffee > div > div {
+    flex: 1;
+    order: unset;
+    padding: 0;
+  }
+}

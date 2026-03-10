@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/coffee/new-york-roastery-microblend",
+  "path": "coffee/new-york-roastery-microblend",
+  "timestamp": "2026-03-09T14:12:33.473Z",
+  "title": "New York Roastery Microblend | Starbucks Reserve",
+  "template": "coffee-detail",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew",
+    "cards-feed",
+    "cards-feed"
+  ]
+}

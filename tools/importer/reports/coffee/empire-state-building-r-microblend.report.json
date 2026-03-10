@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/coffee/empire-state-building-r-microblend",
+  "path": "coffee/empire-state-building-r-microblend",
+  "timestamp": "2026-03-09T14:11:54.584Z",
+  "title": "Empire State Building® MIcroblend | Starbucks Reserve",
+  "template": "coffee-detail",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew",
+    "cards-feed",
+    "cards-feed"
+  ]
+}

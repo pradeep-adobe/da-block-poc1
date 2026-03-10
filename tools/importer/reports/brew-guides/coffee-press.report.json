@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/brew-guides/coffee-press",
+  "path": "brew-guides/coffee-press",
+  "timestamp": "2026-03-09T14:34:00.727Z",
+  "title": "Brew Method: Coffee Press | Starbucks Reserve®",
+  "template": "brew-guide",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew"
+  ]
+}

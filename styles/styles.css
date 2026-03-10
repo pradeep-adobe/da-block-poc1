@@ -1,74 +1,83 @@
 /*
- * Copyright 2020 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
+ * Starbucks Reserve — Global Styles
  *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
+ * Design tokens extracted from starbucksreserve.com
+ * Fonts defined in fonts.css (loaded lazily)
+ *
+ * Original site uses fluid/vw-based sizing. We approximate
+ * with breakpoints at 768px and 1280px.
  */
 
 :root {
   /* colors */
-  --background-color: white;
+  --background-color: #fff;
   --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --dark-color: #231f20;
+  --text-color: #000;
+  --link-color: #000;
+  --link-hover-color: #976d3f;
+  --accent-color: #976d3f;
+  --border-color: #c6c4c3;
+  --footer-bg: #231f20;
+  --footer-text: #fff;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: 'Avenir LT Std', 'Avenir LT Std Fallback', sans-serif;
+  --heading-font-family: 'Trade Gothic Bold Condensed', 'Trade Gothic Bold Condensed Fallback', sans-serif;
+  --cta-font-family: 'Trade Gothic Condensed', sans-serif;
+  --accent-font-family: Sentinel, 'Sentinel Fallback', Georgia, serif;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+  --body-font-size-m: 14px;
+  --body-font-size-s: 13px;
+  --body-font-size-xs: 12px;
 
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  /* heading sizes — mobile first (375px reference) */
+  --heading-font-size-xxl: 46px;
+  --heading-font-size-xl: 30px;
+  --heading-font-size-l: 22px;
+  --heading-font-size-m: 18px;
+  --heading-font-size-s: 16px;
+  --heading-font-size-xs: 14px;
 
-  /* nav heights */
-  --nav-height: 64px;
-  --breadcrumbs-height: 34px;
+  /* spacing — mobile first (5% side padding like original) */
+  --section-padding: 32px 0;
+  --section-padding-large: 64px 0;
+  --container-max-width: 1200px;
+  --gutter: 5%;
+  --grid-gap: 32px;
+
+  /* nav — original: 68px mobile, 72px desktop */
+  --nav-height: 68px;
   --header-height: var(--nav-height);
 }
 
-/* fallback fonts */
-@font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
-}
-
-@media (width >= 900px) {
+/* Tablet */
+@media (width >= 768px) {
   :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
+    --heading-font-size-xxl: 62px;
+    --heading-font-size-xl: 33px;
+    --heading-font-size-l: 24px;
+    --heading-font-size-m: 20px;
+    --heading-font-size-s: 18px;
 
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
+    --section-padding: 48px 0;
+    --section-padding-large: 80px 0;
+  }
+}
+
+/* Desktop */
+@media (width >= 1280px) {
+  :root {
+    --heading-font-size-xxl: 102px;
+    --heading-font-size-xl: 28px;
+    --heading-font-size-l: 24px;
     --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
+
+    --nav-height: 72px;
+    --gutter: 64px;
+    --section-padding: 48px 0;
+    --section-padding-large: 112px 0;
   }
 }
 
@@ -79,7 +88,8 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 body.appear {
@@ -87,7 +97,7 @@ body.appear {
 }
 
 header {
-  height: var(--header-height);
+  height: var(--nav-height);
 }
 
 header .header,
@@ -100,12 +110,7 @@ footer .footer[data-block-status="loaded"] {
   visibility: visible;
 }
 
-@media (width >= 900px) {
-  body[data-breadcrumbs] {
-    --header-height: calc(var(--nav-height) + var(--breadcrumbs-height));
-  }
-}
-
+/* headings — original uses font-weight 400 because Trade Gothic Bold Condensed is inherently bold */
 h1,
 h2,
 h3,
@@ -115,17 +120,37 @@ h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 7px;
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+  letter-spacing: 12px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+  letter-spacing: 7px;
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+  letter-spacing: 5px;
+}
+
 h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+  font-family: var(--cta-font-family);
+  letter-spacing: 4px;
+}
 
 p,
 dl,
@@ -137,6 +162,11 @@ blockquote {
   margin-bottom: 0.25em;
 }
 
+/* content paragraphs get the wider line-height from the original site */
+main p {
+  line-height: 2.4;
+}
+
 code,
 pre {
   font-size: var(--body-font-size-s);
@@ -144,7 +174,7 @@ pre {
 
 pre {
   padding: 16px;
-  border-radius: 8px;
+  border-radius: 0;
   background-color: var(--light-color);
   overflow-x: auto;
   white-space: pre;
@@ -165,42 +195,48 @@ button {
 a:any-link {
   color: var(--link-color);
   text-decoration: none;
-  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 a:hover {
   color: var(--link-hover-color);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
-/* buttons */
+/* buttons / CTA links — original has NO visible border, just text */
 a.button:any-link,
 button {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
   margin: 12px 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
-  font-family: var(--body-font-family);
+  border: 0;
+  border-radius: 0;
+  padding: 4px 8px 4px 12px;
+  font-family: var(--cta-font-family);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: var(--body-font-size-m);
   line-height: 1.25;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background-color: transparent;
+  color: var(--text-color);
   cursor: pointer;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: color 0.2s;
 }
 
 a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
+  background-color: transparent;
+  color: var(--link-hover-color);
   cursor: pointer;
 }
 
@@ -212,11 +248,20 @@ button:disabled:hover {
 
 a.button.secondary,
 button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+  padding: 0.65em 2em;
+  text-align: center;
   color: var(--text-color);
 }
 
+a.button.secondary:hover,
+button.secondary:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+/* images */
 main img {
   max-width: 100%;
   width: auto;
@@ -236,29 +281,254 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  margin: 0;
+  padding: var(--section-padding);
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: var(--container-max-width);
   margin: auto;
-  padding: 0 24px;
+  padding: 0 var(--gutter);
 }
 
 main > .section:first-of-type {
   margin-top: 0;
+  padding-top: 0;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
-  }
-}
-
-/* section metadata */
+/* section metadata styles */
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
-  margin: 0;
-  padding: 40px 0;
+}
+
+main .section.dark {
+  background-color: var(--dark-color);
+  color: var(--footer-text);
+}
+
+main .section.dark a:any-link {
+  color: var(--footer-text);
+}
+
+main .section.dark a.button:any-link {
+  color: var(--footer-text);
+}
+
+main .section.dark a.button:hover {
+  color: var(--accent-color);
+}
+
+.section.hidden {
+  display: none;
+}
+
+/* accent / serif text helper */
+.accent-text,
+main em {
+  font-family: var(--accent-font-family);
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* ============================================================
+   HOMEPAGE COLLAGE LAYOUT
+   Creates two-column grid from flat default-content-wrapper.
+   Children are numbered 1-30 (CSS nth-child is 1-based).
+
+   Content map:
+   1-7:   Hero (full-width)
+   8-11:  "Exquisite Coffees" — images(8) LEFT, text(9-11) RIGHT
+   12-15: "Experiences" — text(12-14) LEFT, images(15) RIGHT
+   16-19: "Empire State" — images(16) LEFT, text(17-19) RIGHT
+   20:    Logo divider (full-width, centered)
+   21-24: "Visit" — images(21) LEFT, text(22-24) RIGHT
+   25-28: "Explore Coffee" — text(25-27) LEFT, images(28) RIGHT
+   29:    Coffee bean illustration (full-width, centered)
+   30:    "Select Coffees" label
+   ============================================================ */
+
+@media (width >= 768px) {
+  /* Grid container */
+  .section.cards-feed-container > .default-content-wrapper:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 64px;
+    max-width: 1200px;
+  }
+
+  /* Default: all children span full width */
+  .section.cards-feed-container > .default-content-wrapper:first-child > * {
+    grid-column: 1 / -1;
+  }
+
+  /* --- Collage 1: Exquisite Coffees (children 8-11) — images LEFT, text RIGHT --- */
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(8) {
+    grid-column: 1;
+    grid-row: 8 / 12;
+    overflow: hidden;
+  }
+
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(9),
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(10),
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(11) {
+    grid-column: 2;
+    align-self: center;
+  }
+
+  /* --- Collage 2: Experiences (children 12-15) — text LEFT, images RIGHT --- */
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(12),
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(13),
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(14) {
+    grid-column: 1;
+    align-self: center;
+  }
+
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(15) {
+    grid-column: 2;
+    grid-row: 12 / 16;
+    overflow: hidden;
+  }
+
+  /* --- Collage 3: Empire State (children 16-19) — images LEFT, text RIGHT --- */
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(16) {
+    grid-column: 1;
+    grid-row: 16 / 20;
+    overflow: hidden;
+  }
+
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(17),
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(18),
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(19) {
+    grid-column: 2;
+    align-self: center;
+  }
+
+  /* --- Logo divider (child 20) — centered --- */
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(20) {
+    text-align: center;
+    padding: 80px 0;
+  }
+
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(20) img {
+    max-width: 80px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* --- Collage 4: Visit (children 21-24) — images LEFT, text RIGHT --- */
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(21) {
+    grid-column: 1;
+    grid-row: 22 / 26;
+    overflow: hidden;
+  }
+
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(22),
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(23),
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(24) {
+    grid-column: 2;
+    align-self: center;
+  }
+
+  /* --- Collage 5: Explore Coffee (children 25-28) — text LEFT, images RIGHT --- */
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(25),
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(26),
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(27) {
+    grid-column: 1;
+    align-self: center;
+  }
+
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(28) {
+    grid-column: 2;
+    grid-row: 26 / 30;
+    overflow: hidden;
+  }
+
+  /* --- Bean illustration (child 29) — centered --- */
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(29) {
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(29) img {
+    max-width: 120px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* --- Select Coffees label (child 30) --- */
+  .section.cards-feed-container > .default-content-wrapper:first-child > :nth-child(30) {
+    font-family: var(--heading-font-family);
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding-top: 24px;
+  }
+}
+
+/* Multi-image paragraphs — mosaic grid layout
+   Uses 3-column grid to accommodate 4 images:
+   +----------+------+------+
+   |          |    img2     |
+   |   img1   +------+------+
+   |          | img3 | img4 |
+   +----------+------+------+
+*/
+.default-content-wrapper > p:has(> img:nth-of-type(3)) {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 4px;
+  line-height: 0;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.default-content-wrapper > p:has(> img:nth-of-type(3)) > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* img1: large left, spans both rows */
+.default-content-wrapper > p:has(> img:nth-of-type(3)) > img:first-child {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+/* img2: top right, spans both right columns */
+.default-content-wrapper > p:has(> img:nth-of-type(3)) > img:nth-child(2) {
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+
+/* img3: bottom center */
+.default-content-wrapper > p:has(> img:nth-of-type(3)) > img:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* img4: bottom right */
+.default-content-wrapper > p:has(> img:nth-of-type(3)) > img:nth-child(4) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+/* City location links — uppercase with separators */
+.default-content-wrapper > p:has(> a[href*="locations"]):has(> a + a) a {
+  text-transform: uppercase;
+  font-family: var(--heading-font-family);
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+.default-content-wrapper > p:has(> a[href*="locations"]):has(> a + a) a + a::before {
+  content: '|';
+  margin: 0 12px;
+  color: var(--border-color);
+}
+
+/* Hero logo — constrain size */
+.section.cards-feed-container > .default-content-wrapper:first-child > :first-child img {
+  max-width: 200px;
 }

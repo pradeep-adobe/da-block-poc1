@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/brew-guides/stovetop",
+  "path": "brew-guides/stovetop",
+  "timestamp": "2026-03-09T14:34:17.905Z",
+  "title": "Brew Method: Stovetop | Starbucks Reserve®",
+  "template": "brew-guide",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/coffee/starbucks-reserve-r-christmas-blend-2025",
+  "path": "coffee/starbucks-reserve-r-christmas-blend-2025",
+  "timestamp": "2026-03-09T14:12:53.423Z",
+  "title": "Starbucks Reserve® Christmas Blend 2025 | Starbucks Reserve",
+  "template": "coffee-detail",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew",
+    "cards-feed",
+    "cards-feed"
+  ]
+}

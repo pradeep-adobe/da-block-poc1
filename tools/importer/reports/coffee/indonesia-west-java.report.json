@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/coffee/indonesia-west-java",
+  "path": "coffee/indonesia-west-java",
+  "timestamp": "2026-03-09T14:12:15.266Z",
+  "title": "Indonesia West Java | Starbucks Reserve",
+  "template": "coffee-detail",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew",
+    "cards-feed",
+    "cards-feed"
+  ]
+}

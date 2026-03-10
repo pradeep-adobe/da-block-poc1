@@ -1,20 +1,145 @@
 footer {
-  background-color: var(--light-color);
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
   font-size: var(--body-font-size-xs);
 }
 
 footer .footer > div {
   margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+  max-width: 1920px;
+  padding: 80px 72px;
 }
 
 footer .footer p {
   margin: 0;
 }
 
-@media (width >= 900px) {
+footer .footer a:any-link {
+  color: var(--footer-text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer .footer a:hover {
+  color: var(--accent-color);
+}
+
+/* Top section: logo LEFT, social links RIGHT (space-between) */
+footer .footer .section:first-child .default-content-wrapper > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 80px;
+}
+
+/* Brand link in footer — styled as uppercase wordmark */
+footer .footer .section:first-child .button-container {
+  margin: 0;
+}
+
+footer .footer .section:first-child .button-container a:any-link {
+  font-family: var(--heading-font-family);
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+/* Top section social links (Find a Location, Instagram) */
+footer .footer .section:first-child ul {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+footer .footer .section:first-child ul a:any-link {
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+footer .footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .footer ul li {
+  margin-bottom: 0;
+}
+
+/* Bottom section: centered */
+footer .footer .section:last-child {
+  text-align: center;
+}
+
+footer .footer .section:last-child .default-content-wrapper > div {
+  padding-top: 32px;
+}
+
+/* Bottom section links — horizontal row on desktop */
+footer .footer .section:last-child ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Bottom section links (Privacy, Terms, etc.) — Avenir, 12px, grey */
+footer .footer .section:last-child a:any-link {
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(198, 196, 195);
+}
+
+footer .footer .section:last-child a:hover {
+  color: var(--footer-text);
+}
+
+/* Copyright text */
+footer .footer .section:last-child p {
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgb(198, 196, 195);
+  margin-top: 22px;
+}
+
+/* Tablet: bottom links stack vertically, top row stays horizontal */
+@media (max-width: 991px) {
   footer .footer > div {
-    padding: 40px 32px 24px;
+    padding: 64px 48px;
+  }
+
+  footer .footer .section:first-child .default-content-wrapper > div {
+    padding-bottom: 48px;
+  }
+
+  footer .footer .section:last-child ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Mobile: stack everything vertically and centered */
+@media (max-width: 600px) {
+  footer .footer > div {
+    padding: 48px 24px;
+  }
+
+  footer .footer .section:first-child .default-content-wrapper > div {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 40px;
   }
 }

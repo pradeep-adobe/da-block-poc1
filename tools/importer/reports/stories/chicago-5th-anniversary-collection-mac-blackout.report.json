@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/stories/chicago-5th-anniversary-collection-mac-blackout",
+  "path": "stories/chicago-5th-anniversary-collection-mac-blackout",
+  "timestamp": "2026-03-09T14:15:43.888Z",
+  "title": "Chicago 5th Anniversary Collection: Mac Blackout",
+  "template": "story-article",
+  "blocks": [
+    "cards-feed"
+  ]
+}

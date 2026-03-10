@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/coffee/chicago-roastery-microblend",
+  "path": "coffee/chicago-roastery-microblend",
+  "timestamp": "2026-03-09T14:11:31.855Z",
+  "title": "Chicago Roastery Microblend | Starbucks Reserve",
+  "template": "coffee-detail",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew",
+    "cards-feed",
+    "cards-feed"
+  ]
+}

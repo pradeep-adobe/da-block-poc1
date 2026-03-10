@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/brew-guides/siphon",
+  "path": "brew-guides/siphon",
+  "timestamp": "2026-03-09T14:34:13.350Z",
+  "title": "Brew Method: Siphon | Starbucks Reserve®",
+  "template": "brew-guide",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew"
+  ]
+}

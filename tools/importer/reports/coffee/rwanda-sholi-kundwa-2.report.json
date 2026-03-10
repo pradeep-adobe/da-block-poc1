@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/coffee/rwanda-sholi-kundwa-2",
+  "path": "coffee/rwanda-sholi-kundwa-2",
+  "timestamp": "2026-03-09T14:12:37.996Z",
+  "title": "Rwanda Sholi Kundwa | Starbucks Reserve",
+  "template": "coffee-detail",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew",
+    "cards-feed",
+    "cards-feed"
+  ]
+}

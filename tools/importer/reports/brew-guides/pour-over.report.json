@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/brew-guides/pour-over",
+  "path": "brew-guides/pour-over",
+  "timestamp": "2026-03-09T14:34:08.688Z",
+  "title": "Brew Method: Pour-Over | Starbucks Reserve®",
+  "template": "brew-guide",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew"
+  ]
+}

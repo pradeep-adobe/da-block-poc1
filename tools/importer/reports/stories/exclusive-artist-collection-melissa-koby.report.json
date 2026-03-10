@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/stories/exclusive-artist-collection-melissa-koby",
+  "path": "stories/exclusive-artist-collection-melissa-koby",
+  "timestamp": "2026-03-09T14:16:02.434Z",
+  "title": "EXCLUSIVE ARTIST COLLECTION: MELISSA KOBY",
+  "template": "story-article",
+  "blocks": [
+    "cards-feed"
+  ]
+}

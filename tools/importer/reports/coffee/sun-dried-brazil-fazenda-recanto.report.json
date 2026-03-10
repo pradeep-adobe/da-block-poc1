@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/coffee/sun-dried-brazil-fazenda-recanto",
+  "path": "coffee/sun-dried-brazil-fazenda-recanto",
+  "timestamp": "2026-03-09T14:13:04.031Z",
+  "title": "Sun-Dried Brazil Fazenda Recanto | Starbucks Reserve",
+  "template": "coffee-detail",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew",
+    "cards-feed",
+    "cards-feed"
+  ]
+}

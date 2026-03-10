@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/stories/welcome-to-hacienda-alsacia-starbucks-coffee-farm",
+  "path": "stories/welcome-to-hacienda-alsacia-starbucks-coffee-farm",
+  "timestamp": "2026-03-09T14:17:15.178Z",
+  "title": "Welcome to the Starbucks Hacienda Alsacia Coffee Farm\"",
+  "template": "story-article",
+  "blocks": [
+    "cards-feed"
+  ]
+}

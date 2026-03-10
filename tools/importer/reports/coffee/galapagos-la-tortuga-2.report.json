@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/coffee/galapagos-la-tortuga-2",
+  "path": "coffee/galapagos-la-tortuga-2",
+  "timestamp": "2026-03-09T14:11:58.764Z",
+  "title": "Galápagos La Tortuga | Starbucks Reserve",
+  "template": "coffee-detail",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew",
+    "cards-feed",
+    "cards-feed"
+  ]
+}

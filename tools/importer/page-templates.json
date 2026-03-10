@@ -1,0 +1,396 @@
+{
+  "templates": [
+    {
+      "name": "about-page",
+      "urls": [
+        "https://www.starbucksreserve.com/about"
+      ],
+      "description": "About page with hero header, full-width image, two-column content sections, and location feed grid",
+      "blocks": [
+        {
+          "name": "columns-info",
+          "instances": [
+            ".image-left_component",
+            ".image-right_component"
+          ]
+        },
+        {
+          "name": "cards-location",
+          "instances": [
+            ".feed_list.is-locations"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Page Header",
+          "selector": ".section_header",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".section_header h1",
+            ".section_header .text-style-subheading"
+          ]
+        },
+        {
+          "id": "section-2",
+          "name": "Full-Width Image",
+          "selector": ".section_full-width-image",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".full-width-image.is-landscape"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "What is Starbucks Reserve",
+          "selector": ".section_image-left",
+          "style": null,
+          "blocks": [
+            "columns-info"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Where To Find Us",
+          "selector": ".section_image-right",
+          "style": null,
+          "blocks": [
+            "columns-info"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Roasteries Location Feed",
+          "selector": ".section_location-feed",
+          "style": null,
+          "blocks": [
+            "cards-location"
+          ],
+          "defaultContent": []
+        }
+      ]
+    },
+    {
+      "name": "booking-page",
+      "urls": [
+        "https://www.starbucksreserve.com/book-a-signature-experience",
+        "https://www.starbucksreserve.com/locations/chicago/book-an-event",
+        "https://www.starbucksreserve.com/locations/new-york/book-an-event",
+        "https://www.starbucksreserve.com/locations/chicago/book-an-experience",
+        "https://www.starbucksreserve.com/locations/new-york/book-an-experience",
+        "https://www.starbucksreserve.com/locations/esb/bookanevent",
+        "https://www.starbucksreserve.com/locations/esb/bookexperiencetickets"
+      ],
+      "description": "Booking and experience reservation pages with embedded booking forms or widgets",
+      "blocks": [
+        { "name": "cards-feed", "instances": [".section_featured-feed .feed_list"] },
+        { "name": "cards-location", "instances": [".feed_list.is-locations"] }
+      ]
+    },
+    {
+      "name": "location-roastery",
+      "urls": [
+        "https://www.starbucksreserve.com/locations/chicago-roastery",
+        "https://www.starbucksreserve.com/locations/new-york-roastery",
+        "https://www.starbucksreserve.com/locations/shanghai-roastery",
+        "https://www.starbucksreserve.com/locations/tokyo-roastery",
+        "https://www.starbucksreserve.com/locations/empire-state-building"
+      ],
+      "description": "Roastery and flagship location landing pages with hero imagery, location details, and featured content",
+      "blocks": [
+        { "name": "cards-feed", "instances": [".section_featured-feed .feed_list"] },
+        { "name": "cards-location", "instances": [".feed_list.is-locations"] }
+      ]
+    },
+    {
+      "name": "location-subpage",
+      "urls": [
+        "https://www.starbucksreserve.com/locations/esb/cocktail-lounge",
+        "https://www.starbucksreserve.com/locations/esb/explorebylevel",
+        "https://www.starbucksreserve.com/locations/esb/visit"
+      ],
+      "description": "Location-specific subpages for ESB with specialized content about venue features and experiences",
+      "blocks": [
+        { "name": "cards-feed", "instances": [".section_featured-feed .feed_list"] }
+      ]
+    },
+    {
+      "name": "location-highlights",
+      "urls": [
+        "https://www.starbucksreserve.com/locations/chicago/highlights",
+        "https://www.starbucksreserve.com/locations/new-york/highlights",
+        "https://www.starbucksreserve.com/locations/tokyo/highlights"
+      ],
+      "description": "Location highlights pages showcasing featured experiences and offerings at specific roastery locations",
+      "blocks": [
+        { "name": "cards-feed", "instances": [".section_featured-feed .feed_list"] }
+      ]
+    },
+    {
+      "name": "find-location",
+      "urls": [
+        "https://www.starbucksreserve.com/find-a-location"
+      ],
+      "description": "Location finder page with map or listing of all Starbucks Reserve locations",
+      "blocks": []
+    },
+    {
+      "name": "visit-page",
+      "urls": [
+        "https://www.starbucksreserve.com/visit-us"
+      ],
+      "description": "General visit information page with location overview and visitor guidance",
+      "blocks": [
+        { "name": "cards-location", "instances": [".feed_list.is-locations"] },
+        { "name": "cards-feed", "instances": [".section_featured-feed .feed_list"] }
+      ]
+    },
+    {
+      "name": "our-coffee",
+      "urls": [
+        "https://www.starbucksreserve.com/our-coffee",
+        "https://www.starbucksreserve.com/our-coffee/coffee-archive"
+      ],
+      "description": "Coffee overview and archive pages showcasing the Reserve coffee collection",
+      "blocks": [
+        { "name": "columns-info", "instances": [".image-cta_component", ".image-left_component"] },
+        { "name": "cards-brew", "instances": [".feed_list.is-brew-guides"] },
+        { "name": "cards-feed", "instances": [".section_featured-feed .feed_list"] }
+      ]
+    },
+    {
+      "name": "menus-landing",
+      "urls": [
+        "https://www.starbucksreserve.com/menus",
+        "https://www.starbucksreserve.com/locations/esb/menus"
+      ],
+      "description": "Menu landing pages with links to individual menu detail pages by location",
+      "blocks": []
+    },
+    {
+      "name": "menu-detail",
+      "urls": [
+        "https://www.starbucksreserve.com/menus/chicago-roastery-arriviamo-bar-menu",
+        "https://www.starbucksreserve.com/menus/chicago-roastery-bar-menu",
+        "https://www.starbucksreserve.com/menus/chicago-roastery-experiential-coffee-bar-menu",
+        "https://www.starbucksreserve.com/menus/chicago-roastery-starbucks-reserve-cafe-menu",
+        "https://www.starbucksreserve.com/menus/empire-state-building-cocktail-coffee-lounge-menu",
+        "https://www.starbucksreserve.com/menus/empire-state-building-tasting-room-experiences-menu",
+        "https://www.starbucksreserve.com/menus/new-york-roastery-arriviamo-menu",
+        "https://www.starbucksreserve.com/menus/new-york-roastery-experience-bar-menu",
+        "https://www.starbucksreserve.com/menus/new-york-roastery-main-coffee-bar-menu"
+      ],
+      "description": "Individual menu detail pages listing food and beverage items organized by category",
+      "blocks": []
+    },
+    {
+      "name": "product-category",
+      "urls": [
+        "https://www.starbucksreserve.com/product-categories/breakfast",
+        "https://www.starbucksreserve.com/product-categories/cocktails-wine-beer",
+        "https://www.starbucksreserve.com/product-categories/coffee",
+        "https://www.starbucksreserve.com/product-categories/coffee-creations",
+        "https://www.starbucksreserve.com/product-categories/other-beverages",
+        "https://www.starbucksreserve.com/product-categories/snacks",
+        "https://www.starbucksreserve.com/product-categories/sweets"
+      ],
+      "description": "Product category listing pages showing items within a specific food or beverage category",
+      "blocks": []
+    },
+    {
+      "name": "coffee-detail",
+      "urls": [
+        "https://www.starbucksreserve.com/coffee/brewed-pour-over-espresso",
+        "https://www.starbucksreserve.com/coffee/chicago-roastery-microblend",
+        "https://www.starbucksreserve.com/coffee/colombia-el-rancho-pink-bourbon",
+        "https://www.starbucksreserve.com/coffee/costa-rica-hacienda-alsacia",
+        "https://www.starbucksreserve.com/coffee/decaffeinated-costa-rica-hacienda-alsacia",
+        "https://www.starbucksreserve.com/coffee/empire-state-building-r-microblend",
+        "https://www.starbucksreserve.com/coffee/galapagos-la-tortuga-2",
+        "https://www.starbucksreserve.com/coffee/hawaii-kona-peaberry-coffee",
+        "https://www.starbucksreserve.com/coffee/honduras-cafico-2",
+        "https://www.starbucksreserve.com/coffee/honey-process-ecuador-loja",
+        "https://www.starbucksreserve.com/coffee/indonesia-west-java",
+        "https://www.starbucksreserve.com/coffee/indonesia-west-java-jamuju",
+        "https://www.starbucksreserve.com/coffee/microblend-no-10",
+        "https://www.starbucksreserve.com/coffee/microblend-no-21",
+        "https://www.starbucksreserve.com/coffee/new-york-roastery-microblend",
+        "https://www.starbucksreserve.com/coffee/rwanda-sholi-kundwa-2",
+        "https://www.starbucksreserve.com/coffee/seattle-roastery-microblend",
+        "https://www.starbucksreserve.com/coffee/starbucks-reserve-r-christmas-2024",
+        "https://www.starbucksreserve.com/coffee/starbucks-reserve-r-christmas-blend-2025",
+        "https://www.starbucksreserve.com/coffee/starbucks-reserve-r-knobcreek-r-bourbon-whiskey-barrel-aged-guatemala",
+        "https://www.starbucksreserve.com/coffee/sun-dried-brazil-fazenda-recanto",
+        "https://www.starbucksreserve.com/coffee/vietnam-dung-kno"
+      ],
+      "description": "Individual coffee detail pages with origin info, tasting notes, brewing recommendations, and imagery",
+      "blocks": [
+        {
+          "name": "columns-coffee",
+          "instances": [".coffee-header_component"]
+        },
+        {
+          "name": "cards-brew",
+          "instances": [".feed_list.is-brew-guides"]
+        },
+        {
+          "name": "cards-feed",
+          "instances": [".section_featured-feed:not(.divier-top) .feed_list", ".section_featured-feed.divier-top .feed_list"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Coffee Header",
+          "selector": ".coffee-header_component",
+          "style": null,
+          "blocks": ["columns-coffee"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Coffee Details",
+          "selector": ".section_coffee-content-right",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [".layout3_content-copy"]
+        },
+        {
+          "id": "section-3",
+          "name": "Brew Guides",
+          "selector": ".section_brew-feed",
+          "style": null,
+          "blocks": ["cards-brew"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Related Stories",
+          "selector": ".section_featured-feed:not(.divier-top)",
+          "style": null,
+          "blocks": ["cards-feed"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Select Coffees",
+          "selector": ".section_featured-feed.divier-top",
+          "style": null,
+          "blocks": ["cards-feed"],
+          "defaultContent": []
+        }
+      ]
+    },
+    {
+      "name": "stories-landing",
+      "urls": [
+        "https://www.starbucksreserve.com/stories"
+      ],
+      "description": "Stories hub page with featured articles and story cards in a grid layout",
+      "blocks": [
+        { "name": "cards-feed", "instances": [".section_featured-feed .feed_list"] }
+      ]
+    },
+    {
+      "name": "story-article",
+      "urls": [
+        "https://www.starbucksreserve.com/stories/art-of-the-pour",
+        "https://www.starbucksreserve.com/stories/building-schools",
+        "https://www.starbucksreserve.com/stories/chicago-5th-anniversary-collection-mac-blackout",
+        "https://www.starbucksreserve.com/stories/coffee-starts-here",
+        "https://www.starbucksreserve.com/stories/destination-pumpkin-spice-empire-state-building",
+        "https://www.starbucksreserve.com/stories/exclusive-artist-collection-dana-tanamachi",
+        "https://www.starbucksreserve.com/stories/exclusive-artist-collection-melissa-koby",
+        "https://www.starbucksreserve.com/stories/exclusive-artist-collection-stevie-shao",
+        "https://www.starbucksreserve.com/stories/extraordinary-women-rwanda",
+        "https://www.starbucksreserve.com/stories/farm-to-filter",
+        "https://www.starbucksreserve.com/stories/febrewary-at-starbucks-reserve",
+        "https://www.starbucksreserve.com/stories/frequently-asked-questions-faqs",
+        "https://www.starbucksreserve.com/stories/handpicked-at-the-roastery",
+        "https://www.starbucksreserve.com/stories/hello-shanghai",
+        "https://www.starbucksreserve.com/stories/origin-yunnan",
+        "https://www.starbucksreserve.com/stories/private-events",
+        "https://www.starbucksreserve.com/stories/psl-bouquet",
+        "https://www.starbucksreserve.com/stories/reserve-coffee-cards",
+        "https://www.starbucksreserve.com/stories/say-it-with-coffee-how-we-give-back",
+        "https://www.starbucksreserve.com/stories/seattle-10th-anniversary-collection-kyler-martz",
+        "https://www.starbucksreserve.com/stories/starbucksrewards",
+        "https://www.starbucksreserve.com/stories/the-starbucks-reserve-empire-state-building-store",
+        "https://www.starbucksreserve.com/stories/welcome-to-hacienda-alsacia-starbucks-coffee-farm"
+      ],
+      "description": "Story article pages with rich content including hero images, body text, embedded media, and related content",
+      "blocks": [
+        {
+          "name": "cards-feed",
+          "instances": [".section_featured-feed .feed_list"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Article Header",
+          "selector": ".section_header",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [".section_header h1", ".section_header .text-style-subheading"]
+        },
+        {
+          "id": "section-2",
+          "name": "Article Body",
+          "selector": [".section_full-width-image", ".section_image-cta"],
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Related Stories",
+          "selector": ".section_featured-feed",
+          "style": null,
+          "blocks": ["cards-feed"],
+          "defaultContent": []
+        }
+      ]
+    },
+    {
+      "name": "brew-guide",
+      "urls": [
+        "https://www.starbucksreserve.com/brew-guides/coffee-press",
+        "https://www.starbucksreserve.com/brew-guides/cold-brew",
+        "https://www.starbucksreserve.com/brew-guides/pour-over",
+        "https://www.starbucksreserve.com/brew-guides/siphon",
+        "https://www.starbucksreserve.com/brew-guides/stovetop",
+        "https://www.starbucksreserve.com/brew-guides/whiskey-barrel-aged-cold-brew"
+      ],
+      "description": "Brew guide pages with step-by-step brewing instructions, equipment details, and tips",
+      "blocks": [
+        { "name": "columns-coffee", "instances": [".coffee-header_component"] },
+        { "name": "cards-brew", "instances": [".feed_list.is-brew-guides"] }
+      ]
+    },
+    {
+      "name": "site-map",
+      "urls": [
+        "https://www.starbucksreserve.com/site-map"
+      ],
+      "description": "Site map page listing all site pages organized by category",
+      "blocks": []
+    },
+    {
+      "name": "home-page",
+      "urls": [
+        "https://www.starbucksreserve.com/"
+      ],
+      "description": "Home page with hero section, collage sections, featured coffee feed, roastery locations, and related stories",
+      "blocks": [
+        { "name": "cards-feed", "instances": [".section_featured-feed .feed_list"] },
+        { "name": "cards-location", "instances": [".section_location-feed .team6_list"] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/stories/psl-bouquet",
+  "path": "stories/psl-bouquet",
+  "timestamp": "2026-03-09T14:16:48.473Z",
+  "title": "New Pumpkin Spice Flavors & Florals",
+  "template": "story-article",
+  "blocks": [
+    "cards-feed"
+  ]
+}

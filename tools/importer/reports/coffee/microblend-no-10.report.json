@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/coffee/microblend-no-10",
+  "path": "coffee/microblend-no-10",
+  "timestamp": "2026-03-09T14:12:24.376Z",
+  "title": "Microblend No. 10 Coffee | Starbucks Reserve",
+  "template": "coffee-detail",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew",
+    "cards-feed",
+    "cards-feed"
+  ]
+}

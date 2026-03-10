@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/locations/esb/bookanevent",
+  "path": "locations/esb/bookanevent",
+  "timestamp": "2026-03-09T14:31:19.140Z",
+  "title": "Book an Event at the Empire State Building Store | Starbucks Reserve®",
+  "template": "booking-page",
+  "blocks": [
+    "cards-feed",
+    "cards-feed",
+    "cards-feed"
+  ]
+}

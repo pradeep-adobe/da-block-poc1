@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/stories/hello-shanghai",
+  "path": "stories/hello-shanghai",
+  "timestamp": "2026-03-09T14:16:35.733Z",
+  "title": "Hello, Shanghai | Starbucks Reserve®",
+  "template": "story-article",
+  "blocks": [
+    "cards-feed"
+  ]
+}

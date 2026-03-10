@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/coffee/honey-process-ecuador-loja",
+  "path": "coffee/honey-process-ecuador-loja",
+  "timestamp": "2026-03-09T14:12:10.683Z",
+  "title": "Honey Process Ecuador Loja | Starbucks Reserve",
+  "template": "coffee-detail",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew",
+    "cards-feed",
+    "cards-feed"
+  ]
+}

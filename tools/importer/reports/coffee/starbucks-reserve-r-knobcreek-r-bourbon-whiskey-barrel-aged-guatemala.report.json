@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/coffee/starbucks-reserve-r-knobcreek-r-bourbon-whiskey-barrel-aged-guatemala",
+  "path": "coffee/starbucks-reserve-r-knobcreek-r-bourbon-whiskey-barrel-aged-guatemala",
+  "timestamp": "2026-03-09T14:12:59.234Z",
+  "title": "Whiskey Barrel-Aged Guatemala | Starbucks Reserve",
+  "template": "coffee-detail",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew",
+    "cards-feed",
+    "cards-feed"
+  ]
+}

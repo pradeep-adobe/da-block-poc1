@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/locations/new-york-roastery",
+  "path": "locations/new-york-roastery",
+  "timestamp": "2026-03-09T14:31:33.602Z",
+  "title": "New York City Roastery | Starbucks Reserve®",
+  "template": "location-roastery",
+  "blocks": [
+    "cards-feed",
+    "cards-feed",
+    "cards-feed"
+  ]
+}

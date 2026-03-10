@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/our-coffee/coffee-archive",
+  "path": "our-coffee/coffee-archive",
+  "timestamp": "2026-03-09T14:32:34.930Z",
+  "title": "Coffee Archive | Starbucks Reserve®",
+  "template": "our-coffee",
+  "blocks": [
+    "cards-feed"
+  ]
+}

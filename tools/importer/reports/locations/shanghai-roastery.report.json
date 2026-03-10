@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/locations/shanghai-roastery",
+  "path": "locations/shanghai-roastery",
+  "timestamp": "2026-03-09T14:31:39.061Z",
+  "title": "Shanghai Roastery | Starbucks Reserve®",
+  "template": "location-roastery",
+  "blocks": [
+    "cards-feed"
+  ]
+}

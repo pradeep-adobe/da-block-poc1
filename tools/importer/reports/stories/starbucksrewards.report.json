@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/stories/starbucksrewards",
+  "path": "stories/starbucksrewards",
+  "timestamp": "2026-03-09T14:17:06.082Z",
+  "title": "Reserve, Meet Rewards",
+  "template": "story-article",
+  "blocks": [
+    "cards-feed"
+  ]
+}

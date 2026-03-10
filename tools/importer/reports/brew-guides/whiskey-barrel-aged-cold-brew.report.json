@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/brew-guides/whiskey-barrel-aged-cold-brew",
+  "path": "brew-guides/whiskey-barrel-aged-cold-brew",
+  "timestamp": "2026-03-09T14:34:22.577Z",
+  "title": "",
+  "template": "brew-guide",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew"
+  ]
+}

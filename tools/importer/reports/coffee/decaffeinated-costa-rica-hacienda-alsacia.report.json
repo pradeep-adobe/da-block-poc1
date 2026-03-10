@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/coffee/decaffeinated-costa-rica-hacienda-alsacia",
+  "path": "coffee/decaffeinated-costa-rica-hacienda-alsacia",
+  "timestamp": "2026-03-09T14:11:49.970Z",
+  "title": "Decaf Costa Rica Hacienda Alsacia® Coffee | Starbucks Reserve",
+  "template": "coffee-detail",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew",
+    "cards-feed",
+    "cards-feed"
+  ]
+}

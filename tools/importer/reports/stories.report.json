@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/stories",
+  "path": "stories",
+  "timestamp": "2026-03-09T14:33:57.256Z",
+  "title": "Stories | Starbucks Reserve®",
+  "template": "stories-landing",
+  "blocks": [
+    "cards-feed"
+  ]
+}

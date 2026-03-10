@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/coffee/costa-rica-hacienda-alsacia",
+  "path": "coffee/costa-rica-hacienda-alsacia",
+  "timestamp": "2026-03-09T14:11:44.371Z",
+  "title": "Costa Rica Hacienda Alsacia | Starbucks Reserve",
+  "template": "coffee-detail",
+  "blocks": [
+    "columns-coffee",
+    "columns-coffee",
+    "cards-brew",
+    "cards-feed",
+    "cards-feed"
+  ]
+}

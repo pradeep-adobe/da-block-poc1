@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.starbucksreserve.com/",
+  "path": "index",
+  "timestamp": "2026-03-09T15:06:19.072Z",
+  "title": "Starbucks Reserve®",
+  "template": "home-page",
+  "blocks": [
+    "cards-feed",
+    "cards-feed"
+  ]
+}

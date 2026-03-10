@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-feed",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-03-09T14:08:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.starbucksreserve.com/coffee/costa-rica-hacienda-alsacia",
+    "originPage": "coffee detail page",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "content-feed",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + label + title + link",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "story feed grids",
+      "coffee listing grids",
+      "content feed cards with image, title and link",
+      "related content sections"
+    ],
+    "notSuitableFor": [
+      "location cards",
+      "icon-based method cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/coffee/costa-rica-hacienda-alsacia"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-09T14:08:00.000Z"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-location",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-03-09T13:51:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.starbucksreserve.com/about",
+    "originPage": "about page",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "location-listing",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + linked name",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "location listing grids",
+      "store/venue cards with images",
+      "simple image + link card layouts"
+    ],
+    "notSuitableFor": [
+      "product cards with descriptions",
+      "feature cards with detailed text"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/about"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-09T13:51:00.000Z"
+  }
+}
