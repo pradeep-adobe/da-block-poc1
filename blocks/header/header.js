@@ -136,7 +136,7 @@ export default async function decorate(block) {
 
   // Extract Star/R logo from brand and place as separate left-side element
   const allBrandImgs = [...navBrand.querySelectorAll('img')];
-  const starLogo = allBrandImgs.find((img) => img.alt && img.alt.includes('Logo') && img.src.includes('Star_Logo'));
+  const starLogo = allBrandImgs.find((img) => img.alt && img.alt.includes('Logo'));
   const wordmark = allBrandImgs.find((img) => img !== starLogo);
 
   if (starLogo) {

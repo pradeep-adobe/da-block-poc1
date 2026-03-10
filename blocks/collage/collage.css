@@ -6,12 +6,7 @@
  * Includes subtle parallax on scroll.
  */
 
-/* Container */
-.collage-container {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding: 0 var(--gutter);
-}
+/* Container - section-level styles handled by styles.css */
 
 .collage {
   display: grid;
