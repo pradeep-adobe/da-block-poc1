@@ -1,0 +1,26 @@
+/* Text Block — generic content wrapper */
+
+.text-block {
+  padding: 0;
+}
+
+.text-block-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-block-content h1,
+.text-block-content h2,
+.text-block-content h3,
+.text-block-content h4 {
+  margin-top: 0;
+}
+
+.text-block-content p:last-child {
+  margin-bottom: 0;
+}
+
+.text-block-content img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,100 @@
+/* ESB Text Block — ESB dark theme text wrapper */
+
+.esb-text {
+  background-color: #3E3837;
+  padding: 32px 16px;
+}
+
+.esb-text-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.esb-text-content h1 {
+  font-family: var(--heading-font-family);
+  font-size: 37px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 9px;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.esb-text-content h2 {
+  font-family: var(--heading-font-family);
+  font-size: 37px;
+  font-weight: 400;
+  color: #B6A17C;
+  text-transform: uppercase;
+  letter-spacing: 9px;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.esb-text-content h3 {
+  font-family: var(--heading-font-family);
+  font-size: 29px;
+  font-weight: 400;
+  color: #B6A17C;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.esb-text-content p {
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.8;
+  margin: 0 0 16px;
+}
+
+.esb-text-content p:last-child {
+  margin-bottom: 0;
+}
+
+.esb-text-content a:any-link {
+  font-family: var(--cta-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: #B6A17C;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.esb-text-content a:hover {
+  color: #EDC864;
+}
+
+.esb-text-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (width >= 768px) {
+  .esb-text {
+    padding: 48px 24px;
+  }
+}
+
+@media (width >= 1280px) {
+  .esb-text {
+    padding: 64px;
+  }
+
+  .esb-text-content h1 {
+    font-size: 51.5px;
+    letter-spacing: 12.5px;
+  }
+
+  .esb-text-content h2 {
+    font-size: 51.5px;
+    letter-spacing: 12.5px;
+  }
+}

@@ -1,0 +1,24 @@
+/* Iframe Block — responsive embed container */
+
+.iframe {
+  padding: 0;
+}
+
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.iframe-wrapper iframe {
+  width: 100%;
+  min-height: 600px;
+  border: none;
+}
+
+@media (width >= 768px) {
+  .iframe-wrapper iframe {
+    min-height: 700px;
+  }
+}

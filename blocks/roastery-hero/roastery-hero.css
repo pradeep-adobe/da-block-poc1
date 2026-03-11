@@ -1,0 +1,144 @@
+/* Roastery Hero — title + description + nav tabs + hero image */
+
+.roastery-hero {
+  padding: 32px 16px 0;
+}
+
+.roastery-hero-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Title */
+.roastery-hero-title h1 {
+  font-family: var(--heading-font-family);
+  font-size: 45px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 12px;
+  line-height: 1.2;
+  margin: 0 0 24px;
+}
+
+/* Description */
+.roastery-hero-description {
+  max-width: 800px;
+  margin: 0 auto 32px;
+}
+
+.roastery-hero-description p {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  line-height: 2;
+  margin: 0;
+}
+
+/* Navigation tabs */
+.roastery-hero-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin: 0 0 32px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.roastery-hero-nav a {
+  font-family: var(--heading-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 12px 20px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.roastery-hero-nav a:hover {
+  color: var(--accent-color);
+}
+
+.roastery-hero-nav a.active {
+  border-bottom-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* Floor anchor links */
+.roastery-hero-anchors {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 0 24px;
+}
+
+.roastery-hero-anchors a {
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.roastery-hero-anchors a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* Hero image */
+.roastery-hero-image {
+  line-height: 0;
+  margin: 0 0 32px;
+}
+
+.roastery-hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Tablet */
+@media (width >= 768px) {
+  .roastery-hero {
+    padding: 48px 24px 0;
+  }
+
+  .roastery-hero-title h1 {
+    font-size: 62px;
+  }
+
+  .roastery-hero-nav a {
+    font-size: 16px;
+    padding: 16px 28px;
+  }
+}
+
+/* Desktop */
+@media (width >= 1280px) {
+  .roastery-hero {
+    padding: 64px 64px 0;
+  }
+
+  .roastery-hero-title h1 {
+    font-size: 85px;
+    letter-spacing: 14px;
+    margin: 0 0 32px;
+  }
+
+  .roastery-hero-description p {
+    font-size: 16px;
+    line-height: 2.4;
+  }
+
+  .roastery-hero-nav a {
+    font-size: 18px;
+    letter-spacing: 4px;
+    padding: 16px 32px;
+  }
+}
