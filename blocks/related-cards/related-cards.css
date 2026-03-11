@@ -1,0 +1,163 @@
+.related-cards > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: var(--grid-gap);
+}
+
+.related-cards > ul > li {
+  background-color: var(--background-color);
+}
+
+.related-cards .related-cards-card-body {
+  padding: 24px 16px;
+  text-align: left;
+}
+
+/* Coffee variant: h3 in feed uses Avenir Roman, 15px, letter-spacing 4px */
+.related-cards.coffee .related-cards-card-body h3 {
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.related-cards .related-cards-card-body p {
+  font-size: var(--body-font-size-m);
+  line-height: 2.4;
+}
+
+.related-cards .related-cards-card-body a:any-link {
+  color: var(--accent-color);
+  font-family: var(--cta-font-family);
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.related-cards .related-cards-card-image {
+  line-height: 0;
+}
+
+.related-cards > ul > li img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+@media (width >= 600px) {
+  .related-cards > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 768px) {
+  .related-cards > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===== Stories variant ===== */
+
+/* Square images for story cards */
+.related-cards.stories > ul > li img {
+  aspect-ratio: 1 / 1;
+}
+
+.related-cards.stories .related-cards-card-body {
+  padding: 16px 0;
+}
+
+/* Category prefix text (e.g. "Starbucks Reserve:") — italic serif */
+.related-cards.stories .related-cards-card-body > p:first-child {
+  font-family: var(--body-font-family, Georgia, serif);
+  font-style: italic;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+  line-height: 1.4;
+  color: rgb(34, 34, 34);
+  margin-bottom: 4px;
+}
+
+/* Story headings — Trade Gothic Bold Condensed, ~26px */
+.related-cards.stories .related-cards-card-body h2 {
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+  font-size: 26px;
+  letter-spacing: 5.5px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+
+/* CTA link in stories */
+.related-cards.stories .related-cards-card-body a:any-link {
+  font-family: var(--cta-font-family);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+/* ===== ESB dark variant ===== */
+
+.section.esb-dark .related-cards > ul {
+  grid-gap: 40px;
+}
+
+.section.esb-dark .related-cards > ul > li {
+  background-color: transparent;
+}
+
+.section.esb-dark .related-cards > ul > li img {
+  aspect-ratio: 4 / 3;
+}
+
+.section.esb-dark .related-cards .related-cards-card-body {
+  padding: 16px 0;
+}
+
+.section.esb-dark .related-cards .related-cards-card-body h3 {
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+  font-size: 29px;
+  letter-spacing: 7px;
+  color: #fff;
+}
+
+.section.esb-dark .related-cards .related-cards-card-body p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.section.esb-dark .related-cards .related-cards-card-body a:any-link {
+  color: #B6A17C;
+  font-family: var(--cta-font-family);
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+.section.esb-dark .related-cards .related-cards-card-body a:hover {
+  color: #EDC864;
+}
+
+@media (width >= 600px) {
+  .section.esb-dark .related-cards > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 768px) {
+  .section.esb-dark .related-cards.three-col > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

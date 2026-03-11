@@ -1,0 +1,10 @@
+{
+  "total": 2,
+  "offset": 0,
+  "limit": 2,
+  "data": [
+    { "Key": "related-cards-stories-cta-label", "Text": "Read the story" },
+    { "Key": "related-cards-coffee-cta-label", "Text": "Read More" }
+  ],
+  ":type": "sheet"
+}
